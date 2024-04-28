@@ -15,9 +15,9 @@ const Banner = () => {
 <div className=" min-h-screen absolute z-30 top-40 p-5 md:pl-20 " >
 <div className=" rounded-[20px]"></div>
   <div className=" text-left text-neutral-content">
-    <div className="max-w-3xl text-yellow-400">
+    <div className="max-w-3xl ">
       <h1    className="mb-5 text-2xl text-gray-100 md:text-6xl font-extrabold font-serif ">Best Modern Handmade Jute & Wooden Crafts </h1>
-      <p  className="mb-5 text-white  font-bold md:text-2xl ">The All New Gorgeous Collection of 2024</p>
+      <p  className="mb-5 text-yellow-200  font-bold md:text-2xl ">The All New Gorgeous Collection of 2024</p>
       <div  className="flex flex-col md:flex-row gap-10 ">
         <div  data-aos="fade-right"   data-aos-duration="1500"><button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 font-bold text-white rounded-full border-b-4 border-blue-950 hover:scale-105">Shop Now</button></div>
      

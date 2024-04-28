@@ -16,6 +16,8 @@ import Registration from './Pages/Registration.jsx';
 import CraftDetails from './Pages/CraftDetails.jsx';
 import Errorpage from './Pages/Errorpage.jsx';
 import MainLayout from './MainLayout/MainLayout.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
+import PrivateRoute from './PriviteRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/add-craft",
-        element:<AddCraft></AddCraft>
+        element:<PrivateRoute><AddCraft></AddCraft></PrivateRoute>
       },
       {
         path:"/all-art-and-crafts",
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/my-art-and-crafts",
-        element:<MyArtAndCrafts></MyArtAndCrafts>
+        element:<PrivateRoute><MyArtAndCrafts></MyArtAndCrafts></PrivateRoute>
       },
       {
         path:"/log-in",
@@ -49,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/craft-details",
-        element:<CraftDetails></CraftDetails>
+        element:<PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>
       }
     ]
   },
@@ -57,7 +59,9 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <AuthProvider>
+    <React.StrictMode>
      <RouterProvider router={router} />
-  </React.StrictMode>,
+     </React.StrictMode>,
+  </AuthProvider>
 )
