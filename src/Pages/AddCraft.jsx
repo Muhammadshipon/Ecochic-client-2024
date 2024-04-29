@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddCraft = () => {
@@ -26,10 +27,27 @@ const AddCraft = () => {
     // console.log(itemName,image,price,rating,processingTime,category,stockStatus,customization,description)
     const newItem = {itemName,image,price,rating,processingTime,category,stockStatus,customization,description,userName,email}
     console.log(newItem);
+
+    fetch('http://localhost:5000/crafts',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(newItem)
+    }).then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+      Swal.fire({
+        title: "Item Added Successfully",
+        text: "Your new craft item have added Successfully",
+        icon: "success"
+      });
+      form.reset();
+    })
   }
   return (
     <div className="flex justify-center items-center">
-    <form onSubmit={handleAddItem} className="md:w-2/3 px-5">
+    <form onSubmit={handleAddItem} className="md:w-2/3 px-5 mb-10">
         {/* container  */}
         <h1 className="text-3xl font-bold text-center my-5 text-indigo-400">Add Your New Craft Item</h1>
     <div className="flex flex-col md:flex-row  gap-10">

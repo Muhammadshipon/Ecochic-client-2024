@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer border-t-2 border-white border-dashed footer-center p-10 text-white bg-gray-800  rounded mt-12">
+      <footer className="footer border-t-2 border-white border-dashed footer-center p-10 text-white bg-gray-800  rounded">
     <div className="max-w-[950px]">
       <a className=" text-3xl font-serif font-extrabold  bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text italic"><p>EcoChic</p></a>
       <p>Wood is predominately used for coarse transport packages and is still widely used around the world (Johansson et al., 1997). The  wooden package is very common, and extremely popular within Western Europe.most importantly as jute can be harvest within 3 months we do not have to cut out precious trees and also we can get rid of plastic packaging and save our mother nature.and for that its gonna cost us nothing more than our true virtual will force and loyalty to our nature.</p>

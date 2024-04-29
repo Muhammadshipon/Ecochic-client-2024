@@ -88,7 +88,7 @@ const LogIn = () => {
 
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mb-16">
 
       <div className="flex flex-col max-w-md p-6 rounded-3xl sm:p-10 shadow-xl border-2 border-gray-400 mt-20">
         <div className="mb-8 text-center">
