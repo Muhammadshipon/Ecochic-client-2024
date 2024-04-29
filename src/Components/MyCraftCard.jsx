@@ -1,7 +1,45 @@
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const MyCraftCard = ({craft}) => {
+const MyCraftCard = ({craft,myCrafts,setMyCrafts}) => {
   const {_id,itemName,image,price,rating,processingTime,category,stockStatus,customization,description} =craft;
+
+  const handleDeleteCraft = _id=>{
+    console.log(_id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+       
+    fetch(`http://localhost:5000/crafts/${_id}`,{
+    method:'DELETE'})
+   .then(res=>res.json())
+   .then(data=>{
+    console.log(data);
+    if(data.deletedCount>0){
+          Swal.fire({
+          title: "Deleted!",
+          text: "Your craft item has been deleted.",
+          icon: "success"
+        });
+        const remainingCrafts = myCrafts.filter(myCraft=>myCraft._id !== _id);
+        setMyCrafts(remainingCrafts);
+    }
+   
+   })
+
+      }
+    });
+
+   
+  }
   return (
     <div>
        <div className=" bg-base-100 shadow-xl rounded-3xl">
@@ -23,8 +61,8 @@ const MyCraftCard = ({craft}) => {
   </div>
    
     <div className="w-full flex justify-around ">
-    <button className="btn btn-info text-white font-bold">Update</button>
-    <button className="btn btn-warning font-bold">Delete</button>
+   <Link to={`/update-craft/${_id}`}> <button className="btn btn-info text-white font-bold">Update</button></Link>
+    <button onClick={()=>handleDeleteCraft(_id)} className="btn btn-warning font-bold">Delete</button>
     </div>
   </div>
 </div>

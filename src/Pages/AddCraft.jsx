@@ -111,7 +111,7 @@ const AddCraft = () => {
      
     </div>
     <div className=" my-5">
-    <button className="btn w-full btn-info ">Add Item</button>
+    <button className="btn w-full btn-info font-bold">Add Item</button>
     </div>
     </form>
     </div>
