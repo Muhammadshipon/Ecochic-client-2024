@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const MyCraftCard = ({craft,myCrafts,setMyCrafts}) => {
+const MyCraftCard = ({craft,displayCrafts,setDisplayCrafts}) => {
   const {_id,itemName,image,price,rating,processingTime,category,stockStatus,customization,description} =craft;
 
   const handleDeleteCraft = _id=>{
@@ -29,8 +29,8 @@ const MyCraftCard = ({craft,myCrafts,setMyCrafts}) => {
           text: "Your craft item has been deleted.",
           icon: "success"
         });
-        const remainingCrafts = myCrafts.filter(myCraft=>myCraft._id !== _id);
-        setMyCrafts(remainingCrafts);
+        const remainingCrafts = displayCrafts.filter(myCraft=>myCraft._id !== _id);
+        setDisplayCrafts(remainingCrafts);
     }
    
    })
