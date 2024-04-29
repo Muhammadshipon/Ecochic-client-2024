@@ -1,8 +1,9 @@
-import { Navigate, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const UpdateCrafts = () => {
+  const navigate = useNavigate();
   const craft = useLoaderData();
   const {_id,itemName,image,price,rating,processingTime,category,stockStatus,customization,description} = craft;
 
@@ -35,13 +36,14 @@ const UpdateCrafts = () => {
       body:JSON.stringify(updatedItem)
     }).then(res=>res.json())
     .then(data=>{
+      navigate('/');
       console.log(data);
       Swal.fire({
         title: "Item updated Successfully",
         text: "Your craft item have updated Successfully",
         icon: "success"
       });
-      Navigate("/");
+      
     })
   }
   return (
