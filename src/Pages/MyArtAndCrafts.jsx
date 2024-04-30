@@ -29,7 +29,7 @@ const MyArtAndCrafts = () => {
   return (
     <div className=" mb-20">
      
-      <h1 className=" text-5xl text-center text-gray-400 font-extrabold"> My arts and crafts </h1>
+      <h1 className=" text-5xl text-center text-gray-400 font-extrabold"> My arts and crafts (<span className="text-green-500 font-bold">{displayCrafts.length}</span>)</h1>
 
       <div className="w-full mb-10 pr-5 text-right">
     <details className="dropdown ">

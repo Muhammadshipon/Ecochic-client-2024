@@ -1,6 +1,7 @@
 import Banner from "../Components/Banner";
 import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import CraftItemCard from "../Components/CraftItemCard";
+import CraftCategoryContainer from "../Components/CraftCategoryContainer";
 
 const Home = () => {
   const crafts = useLoaderData();
@@ -18,6 +19,15 @@ const Home = () => {
     }
    </div>
    </section>
+   
+
+            {/* craft category  */}
+      <section className="my-24">
+      <h1 className="mx-auto text-center leading-snug max-w-xl text-5xl text-gray-400 my-10 font-extrabold">Choose Your Craft By Category</h1>
+      <CraftCategoryContainer></CraftCategoryContainer>
+      </section>
+
+
       <ScrollRestoration></ScrollRestoration>
     </div>
   );

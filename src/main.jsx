@@ -19,6 +19,7 @@ import MainLayout from './MainLayout/MainLayout.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import PrivateRoute from './PriviteRoute/PrivateRoute.jsx';
 import UpdateCrafts from './Pages/UpdateCrafts.jsx';
+import CraftsBySelectedCategory from './Pages/CraftsBySelectedCategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
         path:"/update-craft/:id",
         element:<PrivateRoute><UpdateCrafts></UpdateCrafts></PrivateRoute>,
         loader:({params})=> fetch(`http://localhost:5000/crafts/${params.id}`)
+      },
+      {
+        path:"/craftCategory/:id",
+        element:<PrivateRoute><CraftsBySelectedCategory></CraftsBySelectedCategory></PrivateRoute>,
+        loader:()=>fetch('http://localhost:5000/craftCategory')
       }
     ]
   }

@@ -12,9 +12,9 @@ const PrivateRoute = ({children}) => {
   }
   if(loading){
     return <div className="flex items-center justify-center min-h-screen"><span className="loading loading-bars  text-white loading-xs"></span>
-    <span className="loading loading-bars loading-sm text-white"></span>
-    <span className="loading loading-bars  text-white loading-md"></span>
-    <span className="loading loading-bars loading-lg  text-white"></span></div>
+    <span className="loading loading-bars loading-sm text-gray-400"></span>
+    <span className="loading loading-bars  text-gray-400 loading-md"></span>
+    <span className="loading loading-bars loading-lg  text-gray-400"></span></div>
   }
   return <Navigate to={"/log-in"} state={location.pathname}></Navigate>
 };

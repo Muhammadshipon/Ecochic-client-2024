@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -160,7 +160,7 @@ const LogIn = () => {
 
 
       </div>
-
+ <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

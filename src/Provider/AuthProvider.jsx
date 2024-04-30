@@ -60,6 +60,7 @@ useEffect(()=>{
   const authInfo = {
     user,
     loading,
+    setLoading,
    setUser,
    createUser,
    logInUser,

@@ -10,7 +10,7 @@ const AllArtAndCrafts = () => {
 
   return (
     <div>
-      <h1  className=" text-5xl text-center text-gray-400 font-extrabold my-9"> All Arts and Crafts</h1>
+      <h1  className=" text-5xl text-center text-gray-400 font-extrabold my-9"> All Arts and Crafts (<span className="text-green-500 font-bold">{allCrafts.length}</span>)</h1>
 
       {/* table  */}
       <div className="overflow-x-auto max-w-5xl px-10 mx-auto mb-10">
@@ -22,7 +22,7 @@ const AllArtAndCrafts = () => {
               <th>Item Name</th>
               <th>Processing Time</th>
               <th>Price</th>
-              <th></th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>

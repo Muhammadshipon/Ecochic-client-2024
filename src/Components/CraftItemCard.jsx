@@ -9,7 +9,7 @@ const CraftItemCard = ({craft}) => {
 
   return (
     <div>
-     <div className=" bg-base-100 shadow-xl rounded-3xl">
+     <div className=" bg-base-100 shadow-xl rounded-3xl border-2 border-gray-200">
   <figure><img src={image} className="w-full h-[300px] rounded-t-3xl" /></figure>
   <div className="p-6 flex flex-col justify-between ">
   <div className=" h-[200px]">
