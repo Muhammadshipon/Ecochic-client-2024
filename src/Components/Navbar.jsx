@@ -57,7 +57,7 @@ const Navbar = () => {
       </ul>
     </div>
    <div className="relative right-6 top-2 md:top-0 md:right-0">
-   <a  className="btn btn-ghost font-extrabold text-2xl md:text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text ">EcoChic</a>
+   <a  className="btn btn-ghost font-extrabold text-2xl md:text-5xl bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-serif italic ">EcoChic</a>
    </div>
   </div>
   <div className="navbar-center hidden lg:flex">

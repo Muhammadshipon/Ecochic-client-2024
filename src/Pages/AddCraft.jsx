@@ -11,6 +11,7 @@ const AddCraft = () => {
 
     const userName = user.displayName;
     const email = user.email;
+    
     console.log(userName,email)
 
     const form = e.target;

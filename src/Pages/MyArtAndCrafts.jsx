@@ -28,9 +28,10 @@ const MyArtAndCrafts = () => {
 
   return (
     <div className=" mb-20">
-    <h1 className="text-center text-5xl text-gray-400 mb-10 font-extrabold"> My art and craft </h1>
      
-    <div className="w-full mb-10 pr-5 text-right">
+      <h1 className=" text-5xl text-center text-gray-400 font-extrabold"> My arts and crafts </h1>
+
+      <div className="w-full mb-10 pr-5 text-right">
     <details className="dropdown ">
   <summary className="m-1 btn bg-gray-400 text-white">Customization</summary>
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -39,6 +40,10 @@ const MyArtAndCrafts = () => {
   </ul>
 </details>
     </div>
+     
+   
+     
+    
      
      
      
