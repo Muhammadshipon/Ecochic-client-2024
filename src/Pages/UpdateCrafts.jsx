@@ -30,7 +30,7 @@ const UpdateCrafts = () => {
     const updatedItem = {itemName,image,price,rating,processingTime,category,stockStatus,customization,description}
    
 
-    fetch(`http://localhost:5000/crafts/${_id}`,{
+    fetch(`https://eco-chic-crafts-server.vercel.app/crafts/${_id}`,{
       method:'PUT',
       headers:{
         'content-type':'application/json'

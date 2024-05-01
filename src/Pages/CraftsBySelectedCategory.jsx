@@ -16,7 +16,7 @@ const CraftsBySelectedCategory = () => {
 
     useEffect(()=>{
        setLoading(true)
-      fetch('http://localhost:5000/crafts')
+      fetch('https://eco-chic-crafts-server.vercel.app/crafts')
       .then(res=>res.json())
       .then(data=>{
         setAllCategory(data);

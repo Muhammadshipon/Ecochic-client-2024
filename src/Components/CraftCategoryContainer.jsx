@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const CraftCategoryContainer = () => {
   const [category,setCategory] = useState([])
   useEffect(()=>{
-    fetch('http://localhost:5000/craftCategory')
+    fetch('https://eco-chic-crafts-server.vercel.app/craftCategory')
     .then(res=>res.json())
     .then(data=>{
       console.log(data);

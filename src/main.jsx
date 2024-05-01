@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/crafts')
+        loader:()=>fetch('https://eco-chic-crafts-server.vercel.app/crafts')
       },
       {
         path:"/add-craft",
@@ -39,12 +39,12 @@ const router = createBrowserRouter([
       {
         path:"/all-art-and-crafts",
         element:<AllArtAndCrafts></AllArtAndCrafts>,
-        loader:()=>fetch('http://localhost:5000/crafts')
+        loader:()=>fetch('https://eco-chic-crafts-server.vercel.app/crafts')
       },
       {
         path:"/my-art-and-crafts",
         element:<PrivateRoute><MyArtAndCrafts></MyArtAndCrafts></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/crafts')
+        loader:()=>fetch('https://eco-chic-crafts-server.vercel.app/crafts')
       },
       {
         path:"/log-in",
@@ -57,17 +57,17 @@ const router = createBrowserRouter([
       {
         path:"/craft-details/:id",
         element:<PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-        loader:()=>fetch("http://localhost:5000/crafts")
+        loader:()=>fetch("https://eco-chic-crafts-server.vercel.app/crafts")
       },
       {
         path:"/update-craft/:id",
         element:<PrivateRoute><UpdateCrafts></UpdateCrafts></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/crafts/${params.id}`)
+        loader:({params})=> fetch(`https://eco-chic-crafts-server.vercel.app/crafts/${params.id}`)
       },
       {
         path:"/craftCategory/:id",
         element:<PrivateRoute><CraftsBySelectedCategory></CraftsBySelectedCategory></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/craftCategory')
+        loader:()=>fetch('https://eco-chic-crafts-server.vercel.app/craftCategory')
       }
     ]
   }

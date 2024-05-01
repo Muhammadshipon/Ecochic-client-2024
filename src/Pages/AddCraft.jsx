@@ -29,7 +29,7 @@ const AddCraft = () => {
     const newItem = {itemName,image,price,rating,processingTime,category,stockStatus,customization,description,userName,email}
     console.log(newItem);
 
-    fetch('http://localhost:5000/crafts',{
+    fetch('https://eco-chic-crafts-server.vercel.app/crafts',{
       method:'POST',
       headers:{
         'content-type':'application/json'
