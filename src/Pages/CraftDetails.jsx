@@ -8,7 +8,7 @@ const CraftDetails = () => {
   console.log(craft)
   const {itemName,image,price,rating,processingTime,category,stockStatus,customization,description}=craft;
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200" data-aos="fade-in"  data-aos-duration="2000">
     <div className="hero min-h-screen ">
   <div className="hero-content flex-col lg:flex-row-reverse gap-24">
     <img src={image} className="w-full md:w-[40%] md:h-[400px] rounded-lg shadow-2xl" />

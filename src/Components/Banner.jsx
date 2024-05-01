@@ -6,9 +6,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useTypewriter } from 'react-simple-typewriter';
 
 
 const Banner = () => {
+  const [text] = useTypewriter({
+    words: ['Best Modern Handmade Jute & Wooden Crafts'],
+    loop: 0,
+    typeSpeed:60,
+    deleteSpeed:10
+  })
   return (
     <>
     <div >
@@ -16,7 +23,8 @@ const Banner = () => {
 <div className=" rounded-[20px]"></div>
   <div className=" text-left text-neutral-content">
     <div className="max-w-3xl ">
-      <h1    className="mb-5 text-2xl text-gray-100 md:text-6xl font-extrabold font-serif ">Best Modern Handmade Jute & Wooden Crafts </h1>
+      <h1    className="mb-5 text-2xl text-gray-100 md:text-6xl font-extrabold font-serif "> {text} </h1>
+      
       <p  className="mb-5 text-yellow-200  font-bold md:text-2xl ">The All New Gorgeous Collection of 2024</p>
       <div  className="flex flex-col md:flex-row gap-10 ">
         <div  data-aos="fade-right"   data-aos-duration="1500"><button className="btn bg-gradient-to-r from-cyan-500 to-blue-500 font-bold text-white rounded-full border-b-4 border-blue-950 hover:scale-105">Shop Now</button></div>

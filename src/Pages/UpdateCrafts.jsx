@@ -1,8 +1,10 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+
 import Swal from "sweetalert2";
 
 
 const UpdateCrafts = () => {
+ 
   const navigate = useNavigate();
   const craft = useLoaderData();
   const {_id,itemName,image,price,rating,processingTime,category,stockStatus,customization,description} = craft;

@@ -27,7 +27,7 @@ const MyArtAndCrafts = () => {
 
 
   return (
-    <div className=" mb-20">
+    <div className=" mb-20" data-aos="fade-in"  data-aos-duration="2000" >
      
       <h1 className=" text-5xl text-center text-gray-400 font-extrabold"> My arts and crafts (<span className="text-green-500 font-bold">{displayCrafts.length}</span>)</h1>
 

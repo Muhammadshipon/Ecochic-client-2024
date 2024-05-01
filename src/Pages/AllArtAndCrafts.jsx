@@ -9,7 +9,7 @@ const AllArtAndCrafts = () => {
 
 
   return (
-    <div>
+    <div data-aos="fade-left"  data-aos-duration="1000">
       <h1  className=" text-5xl text-center text-gray-400 font-extrabold my-9"> All Arts and Crafts (<span className="text-green-500 font-bold">{allCrafts.length}</span>)</h1>
 
       {/* table  */}
