@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyCraftCard from "../Components/MyCraftCard";
 
@@ -56,6 +56,7 @@ const MyArtAndCrafts = () => {
           key={craft._id}></MyCraftCard>)
       }
      </div>
+     <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

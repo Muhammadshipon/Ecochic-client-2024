@@ -2,14 +2,20 @@ import Banner from "../Components/Banner";
 import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import CraftItemCard from "../Components/CraftItemCard";
 import CraftCategoryContainer from "../Components/CraftCategoryContainer";
+import Stats from "../Components/Stats";
+import Discount from "../Components/Discount";
+import Hero from "../Components/Hero";
 
 const Home = () => {
   const crafts = useLoaderData();
   console.log(crafts)
   return (
     <div>
+        {/* banner/slider section  */}
       <Banner></Banner>
-      
+         {/* state count section  */}
+      <Stats></Stats>
+
      {/* Craft items section  */}
    <section className="my-24">
     <h1 className="text-center text-5xl text-gray-400 my-10 font-extrabold">Jute And Wooden Crafts</h1>
@@ -19,7 +25,9 @@ const Home = () => {
     }
    </div>
    </section>
-   
+
+           {/* discount section  */}
+   <Discount></Discount>
 
             {/* craft category  */}
       <section className="my-24">
@@ -27,6 +35,11 @@ const Home = () => {
       <CraftCategoryContainer></CraftCategoryContainer>
       </section>
 
+             {/* extra hero section  */}
+    <div className="my-24">
+    <h1 className="mx-auto text-center leading-snug max-w-xl text-5xl text-gray-400 mb-14 font-extrabold">Why Choose Us?</h1>
+    <Hero></Hero>
+    </div>
 
       <ScrollRestoration></ScrollRestoration>
     </div>
