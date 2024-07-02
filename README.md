@@ -1,6 +1,7 @@
 # Category of Website : JUTE AND WOODEN CRAFTS;
 # Website Name : ECOCHIC;
 # live site link : https://ecochic-jute-and-wooden-2024.web.app/
+# server-side: https://github.com/Muhammadshipon/Ecochic-server-2024
 
  # Website Features:
 
@@ -32,4 +33,4 @@ added craft information like- itemname, price, photoURL and they also can edit t
 3. React-simple-typewriter,
 4. React-tooltip
 
-
+# UsagesTechnology: React ,Node ,Express ,Mongodb ,JavaScript ,TailwindCSS, Firebase 
